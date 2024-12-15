@@ -53,7 +53,8 @@ def input_data():
     return text
 
 def generate_random_text():
-    return "образец"
+    words = [''.join(random.choices(string.ascii_lowercase, k=random.randint(3, 7))) for _ in range(20)]
+    return ' '.join(words)
 
 def find_palindromes(text):
     words = ''.join(char if char.isalnum() else ' ' for char in text).split()
